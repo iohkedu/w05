@@ -246,10 +246,10 @@ element    :: Int -> Traversal' s a -> Traversal' s a
 In case the names are not suggestive enough -- here are the expected result
 when using the various transformations:
 ```haskell
-set (heading           each) "Ulaanbaatar" 'x' -- "xlaanbaatar"
-set (tailing           each) "Ulaanbaatar" 'x' -- "Uxxxxxxxxxx"
-set (taking 3          each) "Ulaanbaatar" 'x' -- "xxxanbaatar"
-set (dropping 3        each) "Ulaanbaatar" 'x' -- "Ulaxxxxxxxx"
+set (heading           each) "Kenya" 'x' -- "xenya"
+set (tailing           each) "Kenya" 'x' -- "Kxxxx"
+set (taking 3          each) "Kenya" 'x' -- "xxxya"
+set (dropping 3        each) "Kenya" 'x' -- "Kenxx"
 set (filtering (< 'd') each) "Ulaanbaatar" 'x' -- "xlxxnxxxtxr"
 set (element 1         each) "Ulaanbaatar" 'x' -- "Uxaanbaatar"
 ```

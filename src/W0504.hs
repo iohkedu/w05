@@ -12,8 +12,8 @@ import Optics
 
 -- | Focuses on the first element of the given traversal's focuses.
 --
--- >>> set (heading each) "Ulaanbaatar" 'x'
--- "xlaanbaatar"
+-- >>> set (heading each) "Kenya" 'x'
+-- "xenya"
 -- >>> set (heading each) "" 'x'
 -- ""
 --
@@ -22,8 +22,8 @@ heading _ _ = error "TODO: implement heading"
 
 -- | Focuses on the same elements as the given traversal, skipping the first one.
 --
--- >>> set (tailing each) "Ulaanbaatar" 'x'
--- "Uxxxxxxxxxx"
+-- >>> set (tailing each) "Kenya" 'x'
+-- "Kxxxx"
 -- >>> set (tailing each) "y" 'x'
 -- "y"
 -- >>> set (tailing each) "" 'x'
@@ -34,8 +34,8 @@ tailing _ _ = error "TODO: implement tailing"
 
 -- | Keeps the given number of focuses from the given traversal.
 --
--- >>> set (taking 3 each) "Ulaanbaatar" 'x'
--- "xxxanbaatar"
+-- >>> set (taking 3 each) "Kenya" 'x'
+-- "xxxya"
 -- >>> set (taking 3 each) "yy" 'x'
 -- "xx"
 --
@@ -44,8 +44,8 @@ taking _ _ = error "TODO: implement taking"
 
 -- | Drops the given number of focuses from the given traversal.
 --
--- >>> set (dropping 3 each) "Ulaanbaatar" 'x'
--- "Ulaxxxxxxxx"
+-- >>> set (dropping 3 each) "Kenya" 'x'
+-- "Kenxx"
 -- >>> set (dropping 3 each) "yy" 'x'
 -- "yy"
 --
